@@ -7,6 +7,7 @@ use think\App;
 use think\exception\ValidateException;
 use think\Validate;
 
+
 /**
  * 控制器基础类
  */
@@ -248,5 +249,19 @@ abstract class BaseController
 
         return $newarr;
 
-    }     
+    }   
+
+
+    public function starts($num){
+        $arr = [];
+        for($i = 0;$i<=5;$i++){
+         if($i<=$num){
+             array_push($arr, 1);
+         }else{
+             array_push($arr, 0);
+         }
+        }
+
+        return $arr;
+    }  
 }
